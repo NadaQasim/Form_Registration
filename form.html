@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            margin-top: 100px;
+            padding: 50px;
+            background-color: #5e78a6;
+            border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            color: antiquewhite;
+            font: 20px  "Comic Sans MS";
+        }
+        #submit{
+            align-self: center;
+            width: 350px;
+            height: 40px;
+            border-radius: 5px 8px;
+            background-color: rgba(250, 244, 235, 0.94);
+            color: #5e78a6;
+            font: 20px  "Comic Sans MS";
+        }
+        .textbox{
+            width: 480px;
+            height: 30px;
+            border-radius: 8px;
+            background-color: rgba(250, 244, 235, 0.94);
+            font: 18px  "Comic Sans MS";
+        }
+        #submit:hover{
+            background-color:rgba(128, 128, 128, 0.52);
+            color:antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <form method="post" action="form_handler.php">
+
+        <label>Email: </br><input class="textbox" type="email" name="email" required></label></br></br>
+
+        <label>Password: </br><input class="textbox" type="password" name="password" required></label></br></br>
+
+        <fieldset>
+            <legend>Gender: </legend>
+            <label>Female <input type="radio" name="gender" value="female" required></label>
+            <label>Male <input type="radio" name="gender" value="male" required></label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Choose the color you like : </legend>
+            <label>Pink <input type="checkbox" name="colors[]" value="Pink"><br></label>
+            <label>Violet <input type="checkbox" name="colors[]" value="Violet"><br></label>
+            <label>Magenta <input type="checkbox" name="colors[]" value="Magenta"><br></label>
+        </fieldset>
+        <br>
+        <div>
+            <input id="submit" type="submit" value="Register" name="register">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
